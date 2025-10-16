@@ -2,27 +2,26 @@ package Sandbox.Simulation;
 
 public class Cell {
 
-    private int state;  // 1 for alive, 0 for dead
-    private int nextState;
+    private CellState state;  // 1 for alive, 0 for dead
+    private CellState nextState;
     private int row;
     private int col;
 
     public Cell(int row, int col) {
-        this.state = 1;
+        this.state = CellState.DEAD;
         this.row = row;
         this.col = col;
     }
 
-
-    // EFFECTS: Computes the next state of this cell
-    public int computeNextState() {
-        return -1;
-    }
-
     // MODIFIES: THIS
     // EFFECTS: Changes current state of this cell
-    public int changeState() {
-        return -1;
+    public void changeState() {
+
+    }
+    
+    // EFFECTS: Changes the next state of the cell
+    public void changeNextState() {
+
     }
 
     public int getRow() {
@@ -33,11 +32,11 @@ public class Cell {
         return this.col;
     }
 
-    public int getState() {
+    public CellState getState() {
         return this.state;
     }
 
-    public int getNextState() {
+    public CellState getNextState() {
         return this.nextState;
     }
 
