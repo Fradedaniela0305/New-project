@@ -2,20 +2,22 @@ package Sandbox.Simulation;
 
 public class Cell {
 
-    private CellState state;  // 1 for alive, 0 for dead
+    private CellState state;  
     private CellState nextState;
-    private int row;
-    private int col;
+    private int row; 
+    private int col; 
 
+    // Represents a cell with a row and col positions
     public Cell(int row, int col) {
-        this.state = CellState.DEAD;
+        this.state = CellState.ALIVE;
         this.row = row;
         this.col = col;
     }
 
     // MODIFIES: THIS
     // EFFECTS: Changes current state of this cell
-    public void changeState() {
+    public void changeState(CellState cellState) {
+        
 
     }
     

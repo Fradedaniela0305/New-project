@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 
 import Sandbox.Simulation.Cell;
+import Sandbox.Simulation.CellState;
 
 public class CellTest {
     private Cell testCell;
@@ -17,9 +18,11 @@ public class CellTest {
 
     @Test 
     void test_constructor() {
-        assertEquals(testCell.getState(), 1);
+        assertEquals(testCell.getState(), CellState.ALIVE);
         assertEquals(testCell.getRow(), 1);
         assertEquals(testCell.getCol(), 2);
     }
+
+
 
 }
